@@ -1,0 +1,94 @@
+﻿/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #fff;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+footer {
+    /*position: fixed;*/
+    /*bottom: 0;
+    left: 0;
+    right: 0;*/
+    background: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.container {
+    /*border: 1px solid #ccc;*/
+    padding: 3rem 2rem;
+    /*max-width: 600px;*/
+    text-align: center;
+}
+
+.logo {
+    /*position: fixed;*/
+    max-width: 180px;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.tagline {
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.image-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.03);
+}
+
+button {
+    background: none;
+    border: 1px solid #111;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* Hidden contact details popup */
+#contactPopup {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    background: #eee;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
