@@ -9,8 +9,7 @@ body {
     font-family: system-ui, sans-serif;
     background: #fff;
     color: #111;
-    display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     /*min-height: 100vh;*/
     min-height: 100vh;
@@ -27,7 +26,7 @@ footer {
     right: 0;*/
     background: #fff;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .container {
@@ -39,13 +38,13 @@ footer {
 
 .logo {
     /*position: fixed;*/
-    max-width: 180px;
-    margin: 0 auto 1rem;
+    max-width: 130px;
+    margin: 1rem auto 6rem; /* horizontal centering only, add space at the top */
     display: block;
 }
 
 .tagline {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     font-size: 1.1rem;
     font-weight: normal;
 }
@@ -56,15 +55,56 @@ footer {
 }
 
 .project-image {
-    width: 300px;
+    max-width: 180px;
     height: auto;
     border-radius: 20px;
     transition: transform 0.3s ease;
+    filter: grayscale(100%);
 }
 
-.project-image:hover {
-    transform: scale(1.03);
+    .project-image:hover {
+        transform: scale(1.03);
+        filter: grayscale(0%);
+    }
+
+/*.project-container {
+    position: relative;
+    display: inline-block;
+}*/
+
+.project-container {
+    position: relative;
+    margin-bottom: 0.1rem; /* space between projects */
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem; /* optional, only useful if .project-description is beside the image */
+    flex-direction: row; /* ensures image and description stack vertically inside each project */
 }
+
+
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Appear to the right of the image */
+    margin-left: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    white-space: nowrap;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    /*border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
+    pointer-events: none; /* Prevent hover interference */
+    font-size: 0.9rem;
+    text-align: left;
+    color: #a0a0a0;
+}
+
+.project-container:hover .project-description {
+    opacity: 1;
+}
+/*".project-description" targets it*/
 
 button {
     background: none;
@@ -84,11 +124,13 @@ button:hover {
 #contactPopup {
     margin-top: 1rem;
     font-size: 0.9rem;
-    background: #eee;
+    background: #fff;
     padding: 1rem;
     border-radius: 10px;
+    /*transition: opacity 0.4s ease;*/
 }
 
 .hidden {
     display: none;
+    /*transition: opacity 0.4s ease;*/
 }
