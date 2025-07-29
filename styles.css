@@ -36,6 +36,14 @@ footer {
     text-align: center;
 }
 
+.container-main {
+    /*border: 1px solid #ccc;*/
+    padding: 1rem 1rem;
+    /*max-width: 600px;*/
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .logo {
     /*position: fixed;*/
     max-width: 130px;
@@ -44,7 +52,7 @@ footer {
 }
 
 .tagline {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 1.1rem;
     font-weight: normal;
 }
@@ -55,17 +63,17 @@ footer {
 }
 
 .project-image {
-    max-width: 180px;
+    max-width: 170px;
     height: auto;
     border-radius: 20px;
     transition: transform 0.3s ease;
     filter: grayscale(100%);
 }
 
-    .project-image:hover {
-        transform: scale(1.03);
-        filter: grayscale(0%);
-    }
+.project-image:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+}
 
 /*.project-container {
     position: relative;
@@ -95,7 +103,7 @@ footer {
     /*border: 1px solid #ccc;
     border-radius: 0.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
-    pointer-events: none; /* Prevent hover interference */
+    pointer-events: none; /* Prevents hover interference */
     font-size: 0.9rem;
     text-align: left;
     color: #a0a0a0;
@@ -125,7 +133,7 @@ button:hover {
     margin-top: 1rem;
     font-size: 0.9rem;
     background: #fff;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 10px;
     /*transition: opacity 0.4s ease;*/
 }
@@ -134,29 +142,52 @@ button:hover {
     display: none;
     /*transition: opacity 0.4s ease;*/
 }
+
 /* Scrolling Text */
 .scroll-text {
   overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
+  /*white-space: nowrap;*/
+  /*box-sizing: border-box;*/
   width: 100%; 
   font-size: .8em;  
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
 }
 
-.scroll-text span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll-horizontal 12s linear infinite;
+.scroll-track {
+    display: flex;
+    width: 600px;
+    animation: scroll-horizontal 20s linear infinite;
+}
+
+.scroll-track span {
+    /*display: inline-block;*/
+    white-space: nowrap;
+    padding-right: 2em; /* spacing between repetitions */
 }
 
 @keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-154.5%);
+    }
+}
+
+/*.scroll-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-horizontal 40s linear infinite;
+}*/
+
+/*@keyframes scroll-horizontal {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
-}
+}*/
 
