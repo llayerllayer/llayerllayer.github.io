@@ -29,6 +29,11 @@ footer {
     padding: 1rem 0;
 }
 
+::selection {
+    background:#000; /* Background color of selected text */
+    color: #ffffff ; /* Text color when selected */
+}
+
 .container {
     /*border: 1px solid #ccc;*/
     padding: 3rem 2rem;
