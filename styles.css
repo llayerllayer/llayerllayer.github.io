@@ -29,24 +29,21 @@ footer {
     padding: 1rem 0;
 }
 
-::selection {
-    background:#000; /* Background color of selected text */
-    color: #ffffff ; /* Text color when selected */
-}
-
 .container {
     /*border: 1px solid #ccc;*/
-    padding: 3rem 2rem;
+    padding: 2rem 1rem;
     /*max-width: 600px;*/
     text-align: center;
 }
 
 .container-main {
     /*border: 1px solid #ccc;*/
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
     /*max-width: 600px;*/
     text-align: center;
     margin-bottom: 2rem;
+    position: relative; /* Needed for fade-bottom to align to it */
+    overflow: visible;
 }
 
 .logo {
@@ -64,7 +61,7 @@ footer {
 
 .image-link {
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 .project-image {
@@ -73,11 +70,13 @@ footer {
     border-radius: 20px;
     transition: transform 0.3s ease;
     filter: grayscale(100%);
+    will-change: transform;
 }
 
 .project-image:hover {
     transform: scale(1.03);
     filter: grayscale(0%);
+    z-index: 3; /*supposed to not let hover zoom cause clipping*/
 }
 
 /*.project-container {
@@ -87,11 +86,12 @@ footer {
 
 .project-container {
     position: relative;
-    margin-bottom: 0.1rem; /* space between projects */
+    margin-bottom: 1rem; /* space between projects */
     display: flex;
     align-items: center;
     gap: 2rem; /* optional, only useful if .project-description is beside the image */
-    flex-direction: column; /* ensures image and description stack vertically inside each project */
+    flex-direction: row; /* ensures image and description stack vertically inside each project */
+    overflow: visible;
 }
 
 
@@ -195,4 +195,39 @@ button:hover {
     transform: translateX(-100%);
   }
 }*/
+
+.projects-scroll-wrapper {
+    position: relative;
+    height: 400px; /* adjust based on how many items you want fully visible */
+    display: flex; /* make it a flex container */
+    flex-direction: column; /* stack items vertically */
+    justify-content: flex-start; /* vertical alignment */
+    /*overflow-y: scroll;*/
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    padding-bottom: 100px; /* enough padding so last item isn't hidden */
+    overflow-y: auto;
+    overflow-x: visible; /* <-- this line is key */
+    width: 800px;
+    /*width: fit-content;*/ /* 👈 allows width to grow with content */
+    max-width: 100%; /* prevent it from breaking out of screen */
+    align-items: center;
+}
+
+.projects-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.fade-bottom {
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    pointer-events: none;
+    z-index: 10;
+}
+
 
