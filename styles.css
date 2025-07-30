@@ -49,12 +49,12 @@ footer {
 .logo {
     /*position: fixed;*/
     max-width: 130px;
-    margin: 1rem auto 3rem; /* horizontal centering only, add space at the top */
+    margin: 1rem auto 2rem; /* horizontal centering only, add space at the top */
     display: block;
 }
 
 .tagline {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: 1.1rem;
     font-weight: normal;
 }
@@ -156,7 +156,7 @@ button:hover {
   width: 100%; 
   font-size: .8em;  
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .scroll-track {
