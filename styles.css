@@ -181,6 +181,12 @@ button:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .scroll-text {
+        font-size: 0.6rem; /* Smaller size for phones/tablets */
+    }
+}
+
 /*.scroll-text span {
   display: inline-block;
   padding-left: 100%;
