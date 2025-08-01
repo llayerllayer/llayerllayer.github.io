@@ -38,7 +38,7 @@ footer {
 
 .container {
     /*border: 1px solid #ccc;*/
-    padding: 2rem 1rem;
+    padding: 4rem 2rem;
     /*max-width: 600px;*/
     text-align: center;
     
@@ -84,7 +84,7 @@ footer {
     transition: transform 0.5s ease, filter 0.5s ease;
     filter: opacity(30%);
     will-change: transform;
-    border: 10px white;
+    border: 0;
     border-style:solid;
 }
 
@@ -112,6 +112,7 @@ footer {
     transform: skewY(5deg);
     /* filter: grayscale(100%) opacity(90%); */
     background-color: white;
+    padding: 15px;
 
     border: 2px black;
     border-style:solid;
