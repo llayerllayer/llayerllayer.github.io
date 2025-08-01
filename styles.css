@@ -150,13 +150,14 @@ button:hover {
 
 /* Scrolling Text */
 .scroll-text {
-  overflow: hidden;
-  /*white-space: nowrap;*/
-  /*box-sizing: border-box;*/
-  width: 100%; 
-  font-size: .8em;  
-  position: relative;
-  margin-bottom: 0rem;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*box-sizing: border-box;*/
+    width: 100%;
+    font-size: .8em;
+    color: #a0a0a0;
+    position: relative;
+    margin-bottom: 0rem;
 }
 
 .scroll-track {
