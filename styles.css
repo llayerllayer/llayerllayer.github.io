@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: system-ui, sans-serif;
+    font-family: 'NeutralRegular', sans-serif;
     background: #fff;
     color: #111;
     /*justify-content: center;*/
@@ -59,7 +59,7 @@ footer {
 
 .tagline {
     margin-bottom: 3rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: normal;
 }
 
@@ -172,7 +172,7 @@ button:hover {
     /*white-space: nowrap;*/
     /*box-sizing: border-box;*/
     width: 100%;
-    font-size: .8em;
+    font-size: .9em;
     color: #a0a0a0;
     position: relative;
     margin-bottom: 2rem;
@@ -255,4 +255,44 @@ button:hover {
     z-index: 10;
 }
 
+@font-face {
+    font-family: 'NeutralRegular';
+    src: url('fonts/neutral-font/NeutralStd-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'NeutralRegular-italic';
+    src: url('fonts/neutral-font/NeutralStd-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeutralMedium';
+    src: url('fonts/neutral-font/NeutralStd-Medium.otf') format('opentype');
+    font-weight: 50; /*number does not matter - it is just a label*/
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeutralMedium-italic';
+    src: url('fonts/neutral-font/NeutralStd-MediumItalic.otf') format('opentype');
+    font-weight: 50; /*number does not matter - it is just a label*/
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeutralBold';
+    src: url('fonts/neutral-font/NeutralStd-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeutralBold-italic';
+    src: url('fonts/neutral-font/NeutralStd-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
