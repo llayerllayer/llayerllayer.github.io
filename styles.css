@@ -76,7 +76,7 @@ footer {
     filter: grayscale(100%);
     will-change: transform;
     perspective: 100px;
-    transform: perspective(100px) rotateX(2deg);
+    transform: perspective(100px) rotateX(5deg);
 }
 
 .project-image:hover {
