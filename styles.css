@@ -236,7 +236,7 @@ button:hover {
     }
 
     100% {
-        transform: translateX(-125%);
+        transform: translateX(-150%);
     }
 }
 
