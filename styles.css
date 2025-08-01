@@ -72,19 +72,16 @@ footer {
     max-width: 170px;
     height: auto;
     border-radius: 2px;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, filter 0.5s ease;
     filter: grayscale(100%);
     will-change: transform;
     perspective: 100px;
     transform: perspective(100px) rotateX(2deg);
-    box-shadow: 0px 0px 0px black;
-    z-index: 3;
 }
 
 .project-image:hover {
     transform: scale(1.05);
     filter: grayscale(0%);
-    box-shadow: -6px 10px 25px black;
     z-index: 100;
 }
 
@@ -102,13 +99,13 @@ footer {
     overflow: visible;
     margin-top: -10%;
     
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
     border: 10px #ff0000;
     border-radius: 2px;
 }
 
 .project-container:hover {
-    z-index:100;
+    /* z-index:100; */
     transform: translateY(-20px);
 }
 
