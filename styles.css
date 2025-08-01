@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+header {
+    pointer-events: none;
+}
 body {
     font-family: 'NeutralRegular', sans-serif;
     background: #fff;
@@ -15,6 +21,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    user-select: none;
     /*justify-content: center;*/
     /*align-items: center;*/
 }
@@ -54,13 +61,15 @@ footer {
     /*position: fixed;*/
     max-width: 130px;
     margin: 1rem auto 2rem; /* horizontal centering only, add space at the top */
+    margin-top: 4rem;
     display: block;
 }
 
 .tagline {
     margin-bottom: 3rem;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: normal;
+    left: 50%;
 }
 
 .image-link {
@@ -71,17 +80,18 @@ footer {
 .project-image {
     max-width: 170px;
     height: auto;
-    border-radius: 2px;
+    border-radius: 10px;
     transition: transform 0.5s ease, filter 0.5s ease;
-    filter: grayscale(100%) opacity(100%) blur(0px);
+    filter: opacity(30%);
     will-change: transform;
-    perspective: 100px;
-    transform: perspective(100px) rotateX(5deg);
+
+    border: 10px white;
+    border-style:solid;
+
 }
 
 .project-image:hover {
-    transform: scale(1.05);
-    filter: grayscale(0%) opacity(100%) blur(0);
+    filter: opacity(100%);
     z-index: 100;
 }
 
@@ -91,22 +101,29 @@ footer {
 }*/
 
 .project-container {
+    /* pointer-events:all; */
     position: relative;
     display: flex;
     align-items: center;
     /* gap: 2rem; optional, only useful if .project-description is beside the image */
     flex-direction: row; /* ensures image and description stack vertically inside each project */
     overflow: visible;
-    margin-top: -10%;
+    margin-top: -20%;
     
-    transition: transform 0.5s ease;
-    border: 10px #ff0000;
-    border-radius: 2px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    transform: skewY(5deg);
+    /* filter: grayscale(100%) opacity(90%); */
+    background-color: white;
+
+    border: 2px black;
+    border-style:solid;
+    border-radius: 10px;
 }
 
 .project-container:hover {
     /* z-index:100; */
-    transform: translateY(-20px);
+    transform: translateY(-20px) scale(1.05);
+    /* filter: grayscale(0%) opacity(100%); */
 }
 
 
@@ -124,9 +141,10 @@ footer {
     border-radius: 0.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
     pointer-events: none; /* Prevents hover interference */
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     text-align: left;
-    color: #a0a0a0;
+    color: black;
+    user-select: all;
 }
 
 .project-container:hover .project-description {
@@ -137,9 +155,9 @@ footer {
 button {
     background: #fff;
     color: #111;
-    border: 1px solid #111;
+    border: 2px solid #111;
     padding: 0.6rem 1.2rem;
-    border-radius: 999px;
+    border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
     -webkit-appearance: none; /* disables iOS styling */
@@ -172,10 +190,22 @@ button:hover {
     /*white-space: nowrap;*/
     /*box-sizing: border-box;*/
     width: 100%;
-    font-size: .9em;
-    color: #a0a0a0;
-    position: relative;
-    margin-bottom: 2rem;
+    font-size: .8em;
+    color: black;
+    padding-top: .8rem;
+    padding-bottom: 8rem;
+    margin-bottom: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;   /* Full width */
+    z-index: 1000;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,1) 30%,
+        rgba(255,255,255,0) 100%
+    );
 }
 
 .scroll-track {
