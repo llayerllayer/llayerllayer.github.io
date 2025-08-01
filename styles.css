@@ -59,7 +59,7 @@ footer {
 
 .tagline {
     margin-bottom: 3rem;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: normal;
 }
 
@@ -71,7 +71,8 @@ footer {
 .project-image {
     max-width: 170px;
     height: auto;
-    border-radius: 2px;
+    border-radius: 5px;
+    border: 10px solid white;
     transition: transform 0.5s ease, filter 0.5s ease;
     filter: grayscale(100%);
     will-change: transform;
@@ -172,10 +173,12 @@ button:hover {
     /*white-space: nowrap;*/
     /*box-sizing: border-box;*/
     width: 100%;
-    font-size: .9em;
+    font-size: .8em;
     color: #a0a0a0;
     position: relative;
     margin-bottom: 2rem;
+    border-left: 3.5px solid black;
+    border-right: 3.5px solid black;
 }
 
 .scroll-track {
@@ -295,4 +298,10 @@ button:hover {
     src: url('fonts/neutral-font/NeutralStd-BoldItalic.otf') format('opentype');
     font-weight: bold;
     font-style: italic;
+}
+
+.star {
+    color: black; /* Or use hex: #000 */
+    font-size: 1em; /* Adjust as needed (e.g., 1.5em, 20px, etc.) */
+    /*vertical-align: middle;*/ /* Optional: keeps it aligned with the text */
 }
